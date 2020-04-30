@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ls -l ./abc.txt
+
+if [ $? -ne 0 ]
+then
+exit 4
+fi
+
+./read.sh
+
+if [ $? -ne 0 ]
+then
+exit 5
+fi
+
+
+echo "normal termination"
+
+exit 0
