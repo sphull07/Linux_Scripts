@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Below is the information for the CPU usage...."
+
+cat /proc/cpuinfo | grep -E "(vim|svm)" --color=always

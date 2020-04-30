@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Verifying user privilege....."
+
+if [ $(id -u)="0" ]
+
+then
+echo "you are a super user"
+
+else
+echo "you are not a super user. User is $(whoami) and ID is $(id -u)"
+fi

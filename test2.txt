@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "My first if condition script......"
+
+x="{canada,usa}"
+
+read x
+
+if [ $x=canada ];
+then echo "you are in canada"
+elsif [ $x=usa ]
+then echo "you are in usa"
+
+else
+echo "you are nowhere"
+fi
