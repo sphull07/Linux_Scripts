@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export AWS_ACCESS_KEY_ID=AKIAVN4EBYLUFYICECPI
-export AWS_SECRET_ACCESS_KEY=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
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
 BUCKET=linux-backup-bucket
 
 MYSQL_USER=admin
