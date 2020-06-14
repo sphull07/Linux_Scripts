@@ -6,7 +6,7 @@ BUCKET=linux-backup-bucket
 
 MYSQL_USER=admin
 MYSQL_PASSWORD=Summer$007
-MYSQL_HOST=database-2.cve0ixa8286q.us-east-1.rds.amazonaws.com
+MYSQL_HOST=
 
 mysqldump -u $MYSQL_USER \
 -p $MYSQL_PASSWORD \
