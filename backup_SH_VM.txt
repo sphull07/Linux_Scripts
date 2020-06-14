@@ -1,0 +1,22 @@
+#!/bin/bash
+
+export AWS_ACCESS_KEY_ID=AKIAVN4EBYLUFYICECPI
+export AWS_SECRET_ACCESS_KEY=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
+BUCKET=linux-backup-bucket
+
+MYSQL_USER=admin
+MYSQL_PASSWORD=Summer$007
+MYSQL_HOST=database-2.cve0ixa8286q.us-east-1.rds.amazonaws.com
+
+mysqldump -u $MYSQL_USER \
+-p $MYSQL_PASSWORD \
+-h $MYSQL_HOST \
+--single-transaction \
+--routines --triggers \
+--all-databases | gzip > backup.gz
+
+S3_KEY=$BUCKET/backup/$(date "+%Y-%m-%d")-backup.gz
+aws s3 cp backup.gz s3://$S3_KEY --sse AES256
+
+rm -f backup.gz
+~                               
